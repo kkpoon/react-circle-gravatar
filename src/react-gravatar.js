@@ -5,15 +5,26 @@ var md5 = require('blueimp-md5');
 var Gravatar = React.createClass({
   propTypes: {
     email: React.PropTypes.string.isRequired,
-    size: React.PropTypes.number
+    size: React.PropTypes.number,
+    rating: React.PropTypes.oneOf(['g', 'pg', 'r', 'x']),
+    default: React.PropTypes.oneOf(['404', 'mm', 'identicon', 'monsterid', 'wavatar', 'retro', 'blank']),
   },
   componentDidMount: function() {
     var el = this.getDOMNode();
     var size = this.props.size || 80;
     var email = this.props.email;
-    var radius = size / 2;
-    var url = "//www.gravatar.com/avatar/" + md5(email) + "?d=mm&s=" + size;
+    var rating = this.props.rating || 'g';
+    var defaultImg = this.props.default || 'mm';
+    
+    var params = [];
+    params.push('r=' + rating);
+    params.push('d=' + defaultImg);
+    params.push('s=' + size);
+    
+    var url = "//www.gravatar.com/avatar/" + md5(email) + "?" + params.join('&');
 
+    var radius = size / 2;
+    
     var vis = d3.select(el)
       .append("svg")
         .attr("width", size)
@@ -38,7 +49,7 @@ var Gravatar = React.createClass({
         .attr("transform", "translate(" + radius + "," + radius + ")");
   },
   render: function() {
-    return (<div/>);
+    return (<span/>);
   }
 });
 
