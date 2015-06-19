@@ -1,6 +1,8 @@
 # react-gravatar
 Gravatar in ReactJS
 
+[![Build Status](https://travis-ci.org/kkpoon/react-gravatar.svg?branch=master)](https://travis-ci.org/kkpoon/react-gravatar)
+
 # Install
 
 ```npm install https://github.com/kkpoon/react-gravatar.git```
