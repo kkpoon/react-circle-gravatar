@@ -4,6 +4,7 @@
   "description": "react component which show circle gravatar",
   "main": "src/react-gravatar.js",
   "scripts": {
+    "test": "jest",
     "build": "webpack --progress --colors",
     "dist": "webpack -p --progress --colors",
     "start": "webpack --progress --colors --watch"
@@ -26,5 +27,10 @@
     "d3": "^3.5.5",
     "jsx-loader": "^0.13.2",
     "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "jest-cli": "^0.4.13",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.11"
   }
 }
