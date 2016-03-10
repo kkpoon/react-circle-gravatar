@@ -4,7 +4,7 @@
   "description": "react component which show circle gravatar",
   "main": "dist/gravatar.min.js",
   "scripts": {
-    "test": "jest",
+    "test": "echo \"No Test\"",
     "build": "webpack --progress --colors",
     "dist": "webpack -p --progress --colors --config webpack.config.prod.js",
     "start": "webpack-dev-server --port 3000"
@@ -32,7 +32,6 @@
     "babel-core": "^6.7.0",
     "babel-loader": "^6.2.4",
     "babel-preset-react": "^6.5.0",
-    "jest-cli": "^0.8.2",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
