@@ -1,13 +1,15 @@
 var path = require("path");
 
 module.exports = [{
-  entry: "./src/example.jsx",
+  entry: "./src/gravatar.jsx",
   resolve: {
     extensions: ["", ".js", ".jsx"]
   },
   output: {
-    path: path.resolve(__dirname, '/lib'),
-    filename: "example.js",
+    path: path.resolve(__dirname, 'lib'),
+    filename: "gravatar.js",
+    libraryTarget: "umd",
+    library: "react-circle-gravatar"
   },
   module: {
     loaders: [
@@ -15,15 +17,13 @@ module.exports = [{
     ]
   }
 }, {
-  entry: "./src/gravatar.jsx",
+  entry: "./src/example.jsx",
   resolve: {
     extensions: ["", ".js", ".jsx"]
   },
   output: {
-    path: path.resolve(__dirname, '/lib'),
-    filename: "gravatar.js",
-    libraryTarget: "umd",
-    library: "react-gravatar"
+    path: path.resolve(__dirname, 'lib'),
+    filename: "example.js",
   },
   module: {
     loaders: [

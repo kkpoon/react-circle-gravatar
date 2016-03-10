@@ -1,17 +1,17 @@
 {
-  "name": "react-gravatar",
-  "version": "1.1.0",
+  "name": "react-circle-gravatar",
+  "version": "0.0.0",
   "description": "react component which show circle gravatar",
-  "main": "lib/gravatar.js",
+  "main": "dist/gravatar.min.js",
   "scripts": {
     "test": "jest",
     "build": "webpack --progress --colors",
-    "dist": "webpack -p --progress --colors",
+    "dist": "webpack -p --progress --colors --config webpack.config.prod.js",
     "start": "webpack-dev-server --port 3000"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kkpoon/react-gravatar.git"
+    "url": "git+https://github.com/kkpoon/react-circle-gravatar.git"
   },
   "keywords": [
     "react",
@@ -20,9 +20,9 @@
   "author": "kkpoon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kkpoon/react-gravatar/issues"
+    "url": "https://github.com/kkpoon/react-circle-gravatar/issues"
   },
-  "homepage": "https://github.com/kkpoon/react-gravatar#readme",
+  "homepage": "https://github.com/kkpoon/react-circle-gravatar#readme",
   "dependencies": {
     "blueimp-md5": "^2.3.0",
     "react": "^0.14.7",

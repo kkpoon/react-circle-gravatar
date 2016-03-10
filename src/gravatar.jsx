@@ -22,8 +22,6 @@ var Gravatar = React.createClass({
     params.push('s=' + size);
     var url = "//www.gravatar.com/avatar/" + md5(email) +
       "?" + params.join('&');
-    var radius = size / 2;
-    var translate = "translate(" + radius + "," + radius + ")";
     return (
       <img src={url} style={{width: size, height: size, borderRadius: "50%"}} />
     );
